@@ -26,3 +26,10 @@ Unit test yazdığımız kodun davranışını yine kod yazarak doğrulamamızı
  		Okunaklı, anlaşılabilir ve sürdürebilir olmalıdır.
  		Test başarısız olduğunda durmalı ve iyi bir hata raporu döndürmelidir. Bu hata raporunda neyi test ettin ? ne yapmalı ? beklenen çıktı neydi ve gerçekte ne yaptığıdır ?
 	
+	
+	# Uygulama Linkleri
+		
+		Console Uygulaması için php bin/console app:findNumber
+		
+		Controller için {localhost}/login email =umut@gmail.com şifre=123 bilgileri  {localhost}/panelde response dönücek.
+	
