@@ -2,7 +2,6 @@
 namespace  App\Command;
 
 use Symfony\Component\Console\Command\Command;
-use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Console\Style\SymfonyStyle;
@@ -13,11 +12,11 @@ class FinCommand extends Command
      * @return void
      */
     protected function configure()
+
     {
         $this
             ->setName('App:findNumber')
             ->setDescription('Girilen sayıların arasından en büyüğünü ve en küçük olan sayıyı size geri döndürür.')
-            ->addArgument('value',InputArgument::IS_ARRAY,'Sayılar : ')
             ;
 
     }
@@ -28,8 +27,13 @@ class FinCommand extends Command
      * @return int
      */
     protected function execute(InputInterface $input, OutputInterface $output)
+
     {
-        $value= $input->getArgument('value');
+
+        for ($i = 0; $i <= 10; $i++){
+            $value[$i] = rand(1,600);
+        }
+
         $io = new SymfonyStyle($input,$output);
 
         $io->title('Find Command');
